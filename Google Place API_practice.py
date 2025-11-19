@@ -1,9 +1,10 @@
 import requests
 import os
 import pandas as pd
+from dotenv import load_dotenv
 
-# Set your API key here or use environment variable
-# os.environ['GOOGLE_PLACES_API_KEY'] = 'your_api_key_here'
+load_dotenv()
+
 API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 
 if not API_KEY:
