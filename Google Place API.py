@@ -5,6 +5,9 @@ import pandas as pd
 # Set your API key here or use environment variable
 # os.environ['GOOGLE_PLACES_API_KEY'] = 'your_api_key_here'
 API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+
+if not API_KEY:
+    raise ValueError("please set the GOOGLE_PLACES_API_KEY environment variable. See API_SETUP_INSTRUCTIONS.md for details.")
 # ============================================
 #3. Send a GET request
 # ============================================
